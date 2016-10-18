@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GxCircleCollectionView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +17,45 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r3k-QE-fad" customClass="GxCircleCollectionView" customModule="GxCircleCollectionView" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.15686274510000001" green="0.84313725490000002" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="PoL-bg-84M"/>
+                                    <constraint firstAttribute="height" constant="128" id="lSm-mN-nx2"/>
+                                </constraints>
+                            </view>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="fly-1u-1jo">
+                                <color key="pageIndicatorTintColor" red="1" green="0.39237325169999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="1" green="1" blue="0.82787915209999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rK2-bS-PAJ">
+                                <frame key="frameInset" minX="148" minY="565" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="clickedReloadBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hqb-iP-Iek"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.39237325169999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="r3k-QE-fad" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ARH-Su-YKo"/>
+                            <constraint firstItem="r3k-QE-fad" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Abf-o9-BH3"/>
+                            <constraint firstItem="fly-1u-1jo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V4n-be-lrf"/>
+                            <constraint firstItem="r3k-QE-fad" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dGW-Vi-V0B"/>
+                            <constraint firstItem="r3k-QE-fad" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dmw-hE-rsz"/>
+                            <constraint firstItem="fly-1u-1jo" firstAttribute="bottom" secondItem="r3k-QE-fad" secondAttribute="bottom" id="mJn-BK-QrX"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="circleView" destination="r3k-QE-fad" id="Mh5-cS-aDC"/>
+                        <outlet property="pageControl" destination="fly-1u-1jo" id="MuK-je-tfY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="77.599999999999994" y="17.541229385307346"/>
         </scene>
     </scenes>
 </document>
