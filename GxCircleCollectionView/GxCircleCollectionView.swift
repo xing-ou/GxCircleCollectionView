@@ -170,7 +170,7 @@ class GxCircleCollectionView: UIView {
     
     // MARK: - scrollview代理方法
     
-    //只有手动滑动时，才通过contentoffset更新currentIndex
+    //只要动了就通知滚到哪了
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         guard let _dataSource = self.dataSource else {
             return
@@ -180,7 +180,6 @@ class GxCircleCollectionView: UIView {
             self.currentItemIndex = itemIndex
             self.delegate?.gxCircleCollectonView?(scrollToItem: itemIndex)
         }
-        
     }
     
     

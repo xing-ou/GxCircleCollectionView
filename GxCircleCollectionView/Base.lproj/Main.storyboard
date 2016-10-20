@@ -29,16 +29,8 @@
                                 <color key="pageIndicatorTintColor" red="1" green="0.39237325169999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="1" green="1" blue="0.82787915209999996" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rK2-bS-PAJ">
-                                <frame key="frameInset" minX="148" minY="565" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="clickedReloadBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hqb-iP-Iek"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.39237325169999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="r3k-QE-fad" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ARH-Su-YKo"/>
                             <constraint firstItem="r3k-QE-fad" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Abf-o9-BH3"/>
